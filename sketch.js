@@ -6,12 +6,11 @@ function setup() {
     stroke(255,255,255);
 
     noFill();
-    backgroundColor = (255);
    
 
 }
 function draw(){
-     background(255,255,255);
+     background(255);
      var x;
      x= 50;
      var r=Math.random();
