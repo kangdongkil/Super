@@ -3,7 +3,6 @@ function setup() {
     createCanvas(2000, 2000);
     var x;
      x= 50;
-    noStroke();
 
     noFill();
    
@@ -11,6 +10,7 @@ function setup() {
 }
 function draw(){
      background(255);
+     noStroke();
      var x;
      x= 50;
      var r=Math.random();
