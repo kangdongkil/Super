@@ -3,7 +3,7 @@ function setup() {
     createCanvas(2000, 2000);
     var x;
      x= 50;
-    stroke(255,255,255);
+    noStroke();
 
     noFill();
    
