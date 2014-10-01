@@ -1,17 +1,13 @@
 
 function setup() {
     createCanvas(2000, 2000);
-    var x;
-     x= 50;
     stroke(255,255,255);
-
     noFill();
-    backgroundColor = (255);
    
 
 }
 function draw(){
-     background(255,255,255);
+     background(255);
      var x;
      x= 50;
      var r=Math.random();
@@ -232,8 +228,11 @@ function draw(){
       triangle(18*x,23*x,21*x,27*x,22*x,28*x);
       triangle(18*x,27*x,18*x,33*x,19*x,31*x);
 
- 
+      //pull
+       fill(255,0,0);
+      triangle(mouseX,mouseY-50,mouseX-45,mouseY+50,mouseX+45,mouseY+50);
 
+     
 
 
 
