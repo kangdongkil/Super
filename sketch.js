@@ -1,13 +1,23 @@
 
 function setup() {
     createCanvas(2000, 2000);
+<<<<<<< HEAD
     stroke(255,255,255);
+=======
+    var x;
+     x= 50;
+
+>>>>>>> origin/gh-pages
     noFill();
    
 
 }
 function draw(){
      background(255);
+<<<<<<< HEAD
+=======
+     noStroke();
+>>>>>>> origin/gh-pages
      var x;
      x= 50;
      var r=Math.random();
