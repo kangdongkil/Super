@@ -6,7 +6,7 @@ function setup() {
     stroke(255,255,255);
 
     noFill();
-   // backgroundColor = color(0, 0, 0, 255);
+    backgroundColor = (255);
    
 
 }
@@ -14,6 +14,7 @@ function draw(){
      background(255,255,255);
      var x;
      x= 50;
+     var r=Math.random();
      fillColor = color(
      Math. random() *255,
      Math. random() *255, 
@@ -82,7 +83,7 @@ function draw(){
      triangle(18*x,13*x,21*x,13*x,18*x,16*x);
 
      //reft ear
-     triangle(5*x,14*x,6*x,13*x,7*x,14*x);
+     triangle(5*x*mouseX*r*0.1,14*x,6*x,13*x+mouseY*r*0.1,7*x,14*x);
      triangle(5*x,14*x,7*x,14*x,7*x,15*x);
      triangle(7*x,15*x,7*x,16*x,9*x,15*x);
      triangle(5*x,14*x,7*x,15*x,7*x,16*x);
