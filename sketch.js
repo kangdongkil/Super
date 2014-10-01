@@ -1,7 +1,9 @@
 
 function setup() {
     createCanvas(30000, 30000);
-  stroke(255,255,255);
+    background(0);
+    stroke(255,255,255);
+    
 
     var x;
      x= 50;
@@ -196,32 +198,53 @@ function draw(){
       triangle(13*x,26*x,15*x,26*x,14*x,29*x);
 
       //mok
-
+      fill(95,75,56);
       triangle(16*x,28*x,17*x,30*x,14*x,31*x);
-      
+      fill(92,73,59);
       triangle(14*x,31*x,17*x,30*x,15*x,33*x);
+      fill(98,79,61);
       triangle(16*x,28*x,17*x,29*x,17*x,30*x);
+      fill(99,78,57);
       triangle(16*x,25*x,17*x,25*x,17*x,29*x);
+      fill(130,115,99);
       triangle(17*x,25*x,18*x,25*x,17*x,30*x);
+      fill(99,78,57);
       triangle(18*x,25*x,17*x,30*x,18*x,30*x);
+      fill(97,78,61);
       triangle(16*x,25*x,16*x,27*x,17*x,29*x);
+      fill(98,79,61);
       triangle(16*x,27*x,16*x,28*x,17*x,29*x);
+      fill(99,81,63);
       triangle(15*x,26*x,16*x,26*x,16*x,27*x);
+      fill(88,74,51);
       triangle(17*x,30*x,18*x,30*x,18*x,33*x);
+      fill(98,77,55);
       triangle(18*x,27*x,21*x,30*x,19*x,31*x);
+      fill(105,82,56);
       triangle(18*x,27*x,21*x,27*x,21*x,30*x);
+      fill(88,73,56);
       triangle(21*x,27*x,22*x,28*x,21*x,30*x);
+      fill(64,54,40);
       triangle(14*x,29*x,14*x,31*x,12*x,30*x);
+      fill(74,63,48);
       triangle(14*x,29*x,15*x,29*x,14*x,31*x);
+      fill(82,69,49);
       triangle(15*x,26*x,14*x,29*x,15*x,29*x);
+      fill(74,63,48);
       triangle(15*x,29*x,14*x,31*x,16*x,28*x);
 
       //sujung
+      fill(114,102,89);
       triangle(14*x,25*x,13*x,26*x,15*x,26*x);
+      fill(61,49,35);
       triangle(12*x,29*x,14*x,29*x,12*x,30*x);
+      fill(99,81,63);
       triangle(15*x,26*x,16*x,28*x,15*x,29*x);
+      fill(98,79,61);
       triangle(15*x,26*x,16*x,27*x,16*x,28*x);
+      fill(99,78,57);
       triangle(18*x,23*x,21*x,27*x,22*x,28*x);
+      fill(98,50,57);
       triangle(18*x,27*x,18*x,33*x,19*x,31*x);
 
       //pull
