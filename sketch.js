@@ -1,23 +1,17 @@
 
 function setup() {
-    createCanvas(2000, 2000);
-<<<<<<< HEAD
-    stroke(255,255,255);
-=======
+    createCanvas(30000, 30000);
+  stroke(255,255,255);
+
     var x;
      x= 50;
-
->>>>>>> origin/gh-pages
     noFill();
    
 
 }
 function draw(){
      background(255);
-<<<<<<< HEAD
-=======
      noStroke();
->>>>>>> origin/gh-pages
      var x;
      x= 50;
      var r=Math.random();
@@ -32,27 +26,19 @@ function draw(){
      mouseY / 480 * 255, 0);
 
 
-     fill(mouseColor);
+     fill(116,87,61*r);
      //reft bbul
      triangle(4*x,1*x,3*x,3*x,4*x,3*x);
      rect(3*x,3*x,1*x,3*x);
      triangle(7*x,3*x,5*x,6*x,6*x,6*x);
      triangle(3*x,6*x,2*x,7*x,3*x,7*x);
-     
      triangle(3*x,6*x,4*x,6*x,3*x,7*x);
-     
      triangle(5*x,6*x,5*x,8*x,6*x,8*x);
-     
      triangle(5*x,6*x,6*x,6*x,6*x,8*x);
-    
      rect(2*x,7*x,1*x,1*x);
-    
      triangle(3*x,7*x,3*x,8*x,4*x,8*x);
-     
      rect (2*x,8*x,2*x,2*x);
-     
      triangle(4*x,8*x,4*x,10*x,5*x,10*x);
-     
      triangle(5*x,8*x,6*x,8*x,6*x,10*x);
      triangle(6*x,8*x,6*x,10*x,7*x,10*x);
      triangle(3*x,10*x,4*x,10*x,4*x,11*x);
@@ -89,11 +75,11 @@ function draw(){
      triangle(18*x,13*x,21*x,13*x,18*x,16*x);
 
      //reft ear
-     triangle(5*x*mouseX*r*0.1,14*x,6*x,13*x+mouseY*r*0.1,7*x,14*x);
-     triangle(5*x,14*x,7*x,14*x,7*x,15*x);
-     triangle(7*x,15*x,7*x,16*x,9*x,15*x);
-     triangle(5*x,14*x,7*x,15*x,7*x,16*x);
-     triangle(5*x,14*x,6*x,17*x,7*x,16*x);
+     triangle(5*x+mouseX*r*0.01,14*x,6*x,13*x+mouseY*r*0.1,7*x,14*x);
+     triangle(5*x+mouseX*r*0.01,14*x,7*x,14*x,7*x,15*x);
+     triangle(7*x,14*x,7*x,16*x,9*x,15*x);
+     triangle(5*x+mouseX*r*0.01,14*x,7*x,15*x,7*x,16*x);
+     triangle(5*x+mouseX*r*0.01,14*x,6*x,17*x,7*x,16*x);
      triangle(7*x,16*x,9*x,15*x,12*x,16*x);
      triangle(7*x,16*x,6*x,17*x,8*x,18*x);
      triangle(7*x,16*x,10*x,16*x,8*x,18*x);
@@ -105,7 +91,7 @@ function draw(){
      triangle(10*x,18*x,12*x,18*x,11*x,19*x);
 
       //right ear
-     triangle(18*x,16*x,22*x,14*x,24*x,14*x);
+     triangle(18*x,16*x,22*x,14*x+mouseY*r*0.1,24*x,14*x);
      triangle(18*x,16*x,21*x,16*x,24*x,14*x);
      triangle(21*x,16*x,24*x,14*x,24*x,16*x);
      triangle(24*x,14*x,25*x,14*x,24*x,15*x);
@@ -169,8 +155,8 @@ function draw(){
       triangle(12*x,23*x,14*x,22*x,14*x,23*x);
       triangle(14*x,22*x,16*x,21*x,14*x,23*x);
       fill(44, 42, 37);
-      triangle(14*x,23*x,16*x,21*x,17*x,22*x);
-      triangle(16*x,21*x,17*x,22*x,18*x,22*x);
+      triangle(14*x+mouseX*r*0.01,23*x,16*x,21*x,17*x,22*x+mouseY*r*0.1);
+      triangle(16*x,21*x,17*x,22*x+mouseY*r*0.1,18*x,22*x);
       
       fill(mouseColor);
       triangle(16*x,21*x,18*x,21*x,18*x,22*x);
@@ -182,7 +168,7 @@ function draw(){
       fill(44, 42, 37);
       
       triangle(16*x,24*x,17*x,22*x,18*x,22*x);
-      triangle(14*x,23*x,17*x,22*x,16*x,24*x);
+      triangle(14*x+mouseX*r*0.01,23*x,17*x,22*x,16*x,24*x);
       fill(mouseColor);
       triangle(14*x,23*x,14*x,24*x,16*x,24*x);
       triangle(17*x,23*x,18*x,22*x,18*x,23*x);
