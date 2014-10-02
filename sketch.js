@@ -6,6 +6,7 @@ var trailY0=0;
 var trailY1=0;
 var trailY=[0,0,0,0,0,0,0,0,0,0];
 
+
 function setup() {
     createCanvas(30000, 30000);
     background(0);
@@ -506,8 +507,6 @@ function draw(){
      rect(1450,50+y,15,15);
 
      //mouse ellipse
-     var trailX = [0] ;
-    var trailY = [0] ;
      ellipse(mouseX,mouseY,100,100);
      //trail ellipse #0
      fill(Math.random()*255,Math.random()*255,Math.random()*255,100);
