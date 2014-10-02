@@ -14,8 +14,7 @@ function setup() {
      x= 50;
     noFill();
 }
-    var trailX = [0] ;
-    var trailY = [0] ;
+    
 function draw(){
     background(255,255,255,200);
   
@@ -507,6 +506,8 @@ function draw(){
      rect(1450,50+y,15,15);
 
      //mouse ellipse
+     var trailX = [0] ;
+    var trailY = [0] ;
      ellipse(mouseX,mouseY,100,100);
      //trail ellipse #0
      fill(Math.random()*255,Math.random()*255,Math.random()*255,100);
