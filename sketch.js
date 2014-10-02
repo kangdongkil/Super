@@ -7,15 +7,12 @@ var trailY1=0;
 var trailY=[0,0,0,0,0,0,0,0,0,0];
 
 function setup() {
-    createCanvas(30000, 30000);
+    createCanvas(1500, 1650);
     background(0);
     noStroke();
-    var x;
-     x= 50;
     noFill();
 }
-    var trailX = [0] ;
-    var trailY = [0] ;
+   
 function draw(){
     background(255,255,255,200);
   
@@ -34,29 +31,29 @@ function draw(){
 
      var size = Math.abs(mouseX - 340);
 
-     fill(206, 41, 49,210);
+     fill(206, 41, 49);
      rect(0,0,30*x,3*x);
-     fill(17, 67, 41,230);
+     fill(17, 67, 41);
      rect(0,3*x,30*x,3*x);
-     fill(206, 41, 49,210);
+     fill(206, 41, 49);
      rect(0,6*x,30*x,3*x);
-     fill(17, 67, 41,230);
+     fill(17, 67, 41);
      rect(0,9*x,30*x,3*x);
-     fill(206, 41, 49,210);
+     fill(206, 41, 49);
      rect(0,12*x,30*x,3*x);
-     fill(17, 67, 41,230);
+     fill(17, 67, 41);
      rect(0,15*x,30*x,3*x);
-     fill(206, 41, 49,210);
+     fill(206, 41, 49);
      rect(0,18*x,30*x,3*x);
-     fill(17, 67, 41,230);
+     fill(17, 67, 41);
      rect(0,21*x,30*x,3*x);
-     fill(206, 41, 49,210);
+     fill(206, 41, 49);
      rect(0,24*x,30*x,3*x);
-     fill(17, 67, 41,230);
+     fill(17, 67, 41);
      rect(0,27*x,30*x,3*x);
-     fill(206, 41, 49,210);
+     fill(206, 41, 49);
      rect(0,30*x,30*x,3*x);
-     fill(17, 67, 41,230);
+     fill(17, 67, 41);
      rect(0,33*x,30*x,3*x);
 
    
