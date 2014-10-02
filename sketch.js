@@ -6,13 +6,14 @@ var trailY0=0;
 var trailY1=0;
 var trailY=[0,0,0,0,0,0,0,0,0,0];
 
+
 function setup() {
     createCanvas(1500, 1650);
     background(0);
     noStroke();
     noFill();
 }
-   
+
 function draw(){
     background(255,255,255,200);
   
