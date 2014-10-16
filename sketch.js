@@ -19,6 +19,8 @@ function setup() {
 
 function draw(){
  background(255,255,255,200);
+ noStroke();
+
 
  var x;
  x= 50;
@@ -414,7 +416,7 @@ if(count<-6*x){
      fill(Math.random()*255,Math.random()*255,Math.random()*255,100);
      var y;
      y=300;
-
+     
      rect(20,180,1*x,1*x);
      rect(120,80,15,15);
      //rect(180,200,13,13);
@@ -507,7 +509,8 @@ if(count<-6*x){
      ellipse(mouseX,mouseY,100,100);
      //trail ellipse #0
      fill(Math.random()*255,Math.random()*255,Math.random()*255,100);
-     stroke(255);
+     stroke(255, 255, 255, 128);
+     strokeWeight(10);
      trailX[0]=(mouseX+trailX[0]*4)/5;
      trailY[0]=(mouseY+trailY[0]*4)/5;
      ellipse(trailX[0],trailY[0],60,60);
@@ -518,6 +521,9 @@ if(count<-6*x){
          trailY[i]=(trailY[i-1]+trailY[i]*5)/6;
          ellipse(trailX[i],trailY[i],60,60);
     }
+    
+    stroke(255,255,255,128);
+    strokeWeight(20);
 
     fill(255);
     ellipse(700,dir1,50,50);
