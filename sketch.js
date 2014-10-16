@@ -5,62 +5,61 @@ var trailX=[0,0,0,0,0,0,0,0,0,0];
 var trailY0=0;
 var trailY1=0;
 var trailY=[0,0,0,0,0,0,0,0,0,0];
-
-
+var count=0;
+var dir1=1;
+var dir2=1000;
+var dir3=2000;
+var dir4=3000;
 function setup() {
-    createCanvas(1500, 1650);
-    background(0);
-    noStroke();
-    noFill();
+ createCanvas(1500, 1650);
+ background(0);
+ noStroke();
+ noFill();
 }
 
 function draw(){
-    background(255,255,255,200);
-  
-    var x;
-     x= 50;
-     var r=Math.random();
-     fillColor = color(
+ background(255,255,255,200);
+
+ var x;
+ x= 50;
+ var r=Math.random();
+ fillColor = color(
      Math. random() *255,
      Math. random() *255, 
      Math. random() *255, 
      Math. random() *255);
 
-     mouseColor = color(
+ mouseColor = color(
      mouseX / 640 * 200 + Math. random() * 200,
      mouseY / 480 * 255, 0);
 
-     var size = Math.abs(mouseX - 340);
+ var size = Math.abs(mouseX - 340);
+ if (mouseX < 100) {
+   ellipse(50, 200, 100, 100);
+} else if (mouseX < 200){
+   ellipse(150, 200, 100, 100);
+} else if (mouseX < 300){
+   ellipse(250, 200, 100, 100);
+} else if (mouseX < 400){
+   ellipse(350, 200, 100, 100);
+} else if (mouseX < 500){
+   ellipse(450, 200, 100, 100);
+} else {
+   ellipse(550, 200, 100, 100);
+}
+for(var i=0; i<10; i=i+1){
+     fill(206, 41, 49);
+     rect(0,count+i*6*x,30*x,3*x);
+     fill(17,67,41);
+     rect(0,count+3*x+i*6*x,30*x,3*x);
+}
 
-     fill(206, 41, 49);
-     rect(0,0,30*x,3*x);
-     fill(17, 67, 41);
-     rect(0,3*x,30*x,3*x);
-     fill(206, 41, 49);
-     rect(0,6*x,30*x,3*x);
-     fill(17, 67, 41);
-     rect(0,9*x,30*x,3*x);
-     fill(206, 41, 49);
-     rect(0,12*x,30*x,3*x);
-     fill(17, 67, 41);
-     rect(0,15*x,30*x,3*x);
-     fill(206, 41, 49);
-     rect(0,18*x,30*x,3*x);
-     fill(17, 67, 41);
-     rect(0,21*x,30*x,3*x);
-     fill(206, 41, 49);
-     rect(0,24*x,30*x,3*x);
-     fill(17, 67, 41);
-     rect(0,27*x,30*x,3*x);
-     fill(206, 41, 49);
-     rect(0,30*x,30*x,3*x);
-     fill(17, 67, 41);
-     rect(0,33*x,30*x,3*x);
-
-   
+count=count-3;
+if(count<-6*x){
+     count=0;
+}
 
 
-     
      //reft bbul
      fill(117,91,58);
      triangle(4*x,1*x,3*x,3*x,4*x,3*x);
@@ -178,61 +177,61 @@ function draw(){
      triangle(10*x,18*x,12*x,18*x,11*x,19*x);
 
       //right ear
-     fill(122,113,97);
-     triangle(18*x,16*x,22*x,14*x+mouseY*r*0.1,24*x,14*x);
-     fill(130,118,97);
-     triangle(18*x,16*x,21*x,16*x,24*x,14*x);
-     fill(139,125,112);
-     triangle(21*x,16*x,24*x,14*x,24*x,16*x);
-     fill(81,77,57);
-     triangle(24*x,14*x,25*x,14*x,24*x,15*x);
-     fill(134,111,88);
-     triangle(18*x,16*x,19*x,16*x,19*x,18*x);
-     fill(136,123,108);
-     triangle(19*x,16*x,19*x,18*x,22*x,18*x);
-     fill(125,109,95);
-     triangle(19*x,16*x,21*x,16*x,22*x,18*x);
-     fill(129,118,99);
-     triangle(21*x,16*x,24*x,16*x,22*x,18*x);
-     fill(111,91,73);
-     triangle(18*x,16*x,18*x,18*x,19*x,18*x);
-     fill(151,137,113);
-     triangle(18*x,18*x,19*x,18*x,18*x,19*x);
+      fill(122,113,97);
+      triangle(18*x,16*x,22*x,14*x+mouseY*r*0.1,24*x,14*x);
+      fill(130,118,97);
+      triangle(18*x,16*x,21*x,16*x,24*x,14*x);
+      fill(139,125,112);
+      triangle(21*x,16*x,24*x,14*x,24*x,16*x);
+      fill(81,77,57);
+      triangle(24*x,14*x,25*x,14*x,24*x,15*x);
+      fill(134,111,88);
+      triangle(18*x,16*x,19*x,16*x,19*x,18*x);
+      fill(136,123,108);
+      triangle(19*x,16*x,19*x,18*x,22*x,18*x);
+      fill(125,109,95);
+      triangle(19*x,16*x,21*x,16*x,22*x,18*x);
+      fill(129,118,99);
+      triangle(21*x,16*x,24*x,16*x,22*x,18*x);
+      fill(111,91,73);
+      triangle(18*x,16*x,18*x,18*x,19*x,18*x);
+      fill(151,137,113);
+      triangle(18*x,18*x,19*x,18*x,18*x,19*x);
 
       //face
-     fill(100,76,54);
-     triangle(11*x,15*x,14*x,15*x,12*x,16*x);
-     fill(88,66,45);
-     triangle(12*x,16*x,14*x,15*x,14*x,16*x);
-     fill(75,57,45);
-     rect(14*x, 15*x, 2*x, 2*x);
-     fill(96,70,49);
-     triangle(16*x,15*x,17*x,15*x,16*x,17*x);
-     fill(105,80,53);
-     triangle(17*x,15*x,18*x,16*x,16*x,17*x);
-     fill(75,60,51);
-     triangle(17*x,15*x,18*x,15*x,18*x,16*x);
-     fill(103,76,51);
-     triangle(12*x,16*x,14*x,16*x,14*x,17*x);
-     fill(103,76,51);
-     triangle(12*x,16*x,12*x,17*x,14*x,17*x);
-     fill(119,102,88);
-     triangle(16*x,17*x,18*x,17*x,18*x,16*x);
-     fill(135,122,108);
-     triangle(13*x,17*x,13*x,18*x,14*x,18*x);
-     fill(79,70,54);
-     triangle(13*x,17*x,15*x,17*x,14*x,18*x);
-     fill(57,46,35);
-     triangle(14*x,18*x,15*x,17*x,15*x,18*x);
-     fill(62,55,53);
-     rect(15*x,17*x,1*x,1*x);
-     fill(119,102,88);
-     triangle(16*x,17*x,17*x,17*x,17*x,19*x);
-     fill(111,91,73);
-     rect(17*x,17*x,1*x,1*x);
+      fill(100,76,54);
+      triangle(11*x,15*x,14*x,15*x,12*x,16*x);
+      fill(88,66,45);
+      triangle(12*x,16*x,14*x,15*x,14*x,16*x);
+      fill(75,57,45);
+      rect(14*x, 15*x, 2*x, 2*x);
+      fill(96,70,49);
+      triangle(16*x,15*x,17*x,15*x,16*x,17*x);
+      fill(105,80,53);
+      triangle(17*x,15*x,18*x,16*x,16*x,17*x);
+      fill(75,60,51);
+      triangle(17*x,15*x,18*x,15*x,18*x,16*x);
+      fill(103,76,51);
+      triangle(12*x,16*x,14*x,16*x,14*x,17*x);
+      fill(103,76,51);
+      triangle(12*x,16*x,12*x,17*x,14*x,17*x);
+      fill(119,102,88);
+      triangle(16*x,17*x,18*x,17*x,18*x,16*x);
+      fill(135,122,108);
+      triangle(13*x,17*x,13*x,18*x,14*x,18*x);
+      fill(79,70,54);
+      triangle(13*x,17*x,15*x,17*x,14*x,18*x);
+      fill(57,46,35);
+      triangle(14*x,18*x,15*x,17*x,15*x,18*x);
+      fill(62,55,53);
+      rect(15*x,17*x,1*x,1*x);
+      fill(119,102,88);
+      triangle(16*x,17*x,17*x,17*x,17*x,19*x);
+      fill(111,91,73);
+      rect(17*x,17*x,1*x,1*x);
       //eye
-     fill(35,32,25);
-     triangle(17*x,19*x,18*x,19*x,18*x,18*x);
+      fill(35,32,25);
+      triangle(17*x,19*x,18*x,19*x,18*x,18*x);
      //triangle(17*x,18*x,17*x,19*x,18*x,17*x);
      fill(53,44,37);
      triangle(17*x,18*x,17*x,19*x,18*x,18*x);
@@ -287,7 +286,7 @@ function draw(){
      triangle(14*x+mouseX*r*0.01,23*x,16*x,21*x,17*x,22*x+mouseY*r*0.1);
      fill(44, 42, 37)
      triangle(16*x,21*x,17*x,22*x+mouseY*r*0.1,18*x,22*x);
-      
+
      fill(125, 109, 95);
      triangle(16*x,21*x,18*x,21*x,18*x,22*x);
      fill(82, 63, 46);
@@ -301,7 +300,7 @@ function draw(){
      fill(88, 76, 65);
      rect(12*x, 23*x, 2*x, 1*x); 
      fill(62, 55, 41);
-      
+
      triangle(16*x,24*x,17*x,22*x,18*x,22*x);
      fill(0);
      triangle(14*x+mouseX*r*0.01,23*x,17*x,22*x,16*x,24*x);
@@ -323,30 +322,30 @@ function draw(){
      rect(17*x,23*x,1*x,2*x);
 
       //tuck 
-     fill(82, 63, 46);
-     triangle(18*x,23*x,18*x,27*x,21*x,27*x);
-     fill(62, 55, 41);
-     triangle(11*x,25*x,12*x,24*x,13*x,26*x);
-     fill(69, 59, 46);
-     triangle(12*x,24*x,13*x,26*x,14*x,25*x);
-     fill(82, 63, 46);
-     triangle(14*x,25*x,16*x,24*x,16*x,27*x);
-     fill(125, 109, 95);
-     triangle(16*x,24*x,16*x,25*x,17*x,25*x);
-     fill(69, 59, 46);
-     triangle(11*x,25*x,11*x,29*x,10*x,28*x);
-     fill(69, 59, 46);
-     triangle(11*x,25*x,13*x,26*x,11*x,28*x);
-     fill(82, 63, 46)
-     triangle(13*x,26*x,11*x,28*x,14*x,29*x);
-     fill(69, 59, 46);
-     triangle(11*x,28*x,11*x,29*x,14*x,29*x);
-     fill(69, 59, 46);
-     triangle(11*x,29*x,12*x,29*x,12*x,30*x);
-     fill(69, 53, 41);
-     triangle(14*x,29*x,12*x,30*x,14*x,31*x);
-     fill(82, 63, 46);
-     triangle(13*x,26*x,15*x,26*x,14*x,29*x);
+      fill(82, 63, 46);
+      triangle(18*x,23*x,18*x,27*x,21*x,27*x);
+      fill(62, 55, 41);
+      triangle(11*x,25*x,12*x,24*x,13*x,26*x);
+      fill(69, 59, 46);
+      triangle(12*x,24*x,13*x,26*x,14*x,25*x);
+      fill(82, 63, 46);
+      triangle(14*x,25*x,16*x,24*x,16*x,27*x);
+      fill(125, 109, 95);
+      triangle(16*x,24*x,16*x,25*x,17*x,25*x);
+      fill(69, 59, 46);
+      triangle(11*x,25*x,11*x,29*x,10*x,28*x);
+      fill(69, 59, 46);
+      triangle(11*x,25*x,13*x,26*x,11*x,28*x);
+      fill(82, 63, 46)
+      triangle(13*x,26*x,11*x,28*x,14*x,29*x);
+      fill(69, 59, 46);
+      triangle(11*x,28*x,11*x,29*x,14*x,29*x);
+      fill(69, 59, 46);
+      triangle(11*x,29*x,12*x,29*x,12*x,30*x);
+      fill(69, 53, 41);
+      triangle(14*x,29*x,12*x,30*x,14*x,31*x);
+      fill(82, 63, 46);
+      triangle(13*x,26*x,15*x,26*x,14*x,29*x);
 
      //mok
      fill(95,75,56);
@@ -415,7 +414,7 @@ function draw(){
      fill(Math.random()*255,Math.random()*255,Math.random()*255,100);
      var y;
      y=300;
-      
+
      rect(20,180,1*x,1*x);
      rect(120,80,15,15);
      //rect(180,200,13,13);
@@ -458,7 +457,7 @@ function draw(){
      //rect(1100,190+y,18,18);
      rect(1300,250+y,16,16);
      rect(1450,50+y,15,15);
-   
+
      y=900;
      rect(20,180+y,18,18);
      rect(120,80+y,15,15);
@@ -488,7 +487,7 @@ function draw(){
      rect(1100,190+y,18,18);
      rect(1300,250+y,1*x,1*x);
      rect(1450,50+y,15,15);
-   
+
      y=1500;
      rect(20,180+y,12,12);
      rect(120,80+y,15,15);
@@ -512,19 +511,103 @@ function draw(){
      trailX[0]=(mouseX+trailX[0]*4)/5;
      trailY[0]=(mouseY+trailY[0]*4)/5;
      ellipse(trailX[0],trailY[0],60,60);
-   
+
      for(var i=1; i<10; i=i+1)
      {
-      trailX[i]=(trailX[i-1]+trailX[i]*5)/6;
-      trailY[i]=(trailY[i-1]+trailY[i]*5)/6;
-      ellipse(trailX[i],trailY[i],60,60);
-       }
-
-        
-      
+         trailX[i]=(trailX[i-1]+trailX[i]*5)/6;
+         trailY[i]=(trailY[i-1]+trailY[i]*5)/6;
+         ellipse(trailX[i],trailY[i],60,60);
     }
 
-   
+    fill(255);
+    ellipse(700,dir1,50,50);
+    ellipse(100,dir1+500,20,20);
+    ellipse(200,dir1+r,30,30);
+    ellipse(300,dir1+800,25,25);
+    ellipse(400,dir1+100,20,20);
+    ellipse(500,dir1+350,34,34);
+    ellipse(600,dir1+270,47,47);
+    ellipse(800,dir1+900,25,25);
+    ellipse(900,dir1+670,34,34);
+    ellipse(1000,dir1+230,17,17);
+    ellipse(1100,dir1+590,28,28);
+    ellipse(1200,dir1+312,33,33);
+    ellipse(1300,dir1+100,50,50);
+    ellipse(1400,dir1+400,27,27);
+    ellipse(1500,dir1+777,35,35);
+    dir1=dir1+3;     
+    if(dir1>1700){
+     dir1=-1700;
+    }
+ 
+
+      fill(255);
+     ellipse(700,dir2,50,50);
+     ellipse(100,dir2+500,20,20);
+     ellipse(200,dir2+r,30,30);
+     ellipse(300,dir2+800,25,25);
+     ellipse(400,dir2+100,20,20);
+     ellipse(500,dir2+350,34,34);
+     ellipse(600,dir2+270,47,47);
+     ellipse(800,dir2+900,25,25);
+     ellipse(900,dir2+670,34,34);
+     ellipse(1000,dir2+230,17,17);
+     ellipse(1100,dir2+590,28,28);
+     ellipse(1200,dir2+312,33,33);
+     ellipse(1300,dir2+100,50,50);
+     ellipse(1400,dir2+400,27,27);
+     ellipse(1500,dir2+777,35,35);
+     dir2=dir2+3;     
+    if(dir2>1700){
+      dir2=-1700;
+ }
+     fill(255);
+     ellipse(700,dir3,50,50);
+     ellipse(100,dir3+500,20,20);
+     ellipse(200,dir3+r,30,30);
+     ellipse(300,dir3+800,25,25);
+     ellipse(400,dir3+100,20,20);
+     ellipse(500,dir3+350,34,34);
+     ellipse(600,dir3+270,47,47);
+     ellipse(800,dir3+900,25,25);
+     ellipse(900,dir3+670,34,34);
+     ellipse(1000,dir3+230,17,17);
+     ellipse(1100,dir3+590,28,28);
+     ellipse(1200,dir3+312,33,33);
+     ellipse(1300,dir3+100,50,50);
+     ellipse(1400,dir3+400,27,27);
+     ellipse(1500,dir3+777,35,35);
+     dir3=dir3+3;     
+    if(dir3>1700){
+      dir3=-1700;
+ }
+      fill(255);
+     ellipse(700,dir4,50,50);
+     ellipse(100,dir4+500,20,20);
+     ellipse(200,dir4+r,30,30);
+     ellipse(300,dir4+800,25,25);
+     ellipse(400,dir4+100,20,20);
+     ellipse(500,dir4+350,34,34);
+     ellipse(600,dir4+270,47,47);
+     ellipse(800,dir4+900,25,25);
+     ellipse(900,dir4+670,34,34);
+     ellipse(1000,dir4+230,17,17);
+     ellipse(1100,dir4+590,28,28);
+     ellipse(1200,dir4+312,33,33);
+     ellipse(1300,dir4+100,50,50);
+     ellipse(1400,dir4+400,27,27);
+     ellipse(1500,dir4+777,35,35);
+     dir4=dir4+3;     
+    if(dir4>1700){
+      dir4=-1700;
+ }
+ 
+
+
+
+}
+
+
 
 
 
