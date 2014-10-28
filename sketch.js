@@ -14,6 +14,7 @@ var dir4=3000;
 var f = 0;
 
 
+
 function setup() {
    createCanvas(1500, 1650);
    background(0);
@@ -21,15 +22,12 @@ function setup() {
    noFill();
 }
 
-/*
-function preload() {
-  soundFormats('mp3', 'ogg');
-  soundFile = loadSound('assets/beatbox.ogg');
-}
-*/
+
+
 
 
 function mouseClicked(){
+    mysound.play();
     if(f===0){
         f=1;
     }else if(f===1){
