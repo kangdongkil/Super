@@ -14,10 +14,11 @@ var dir4=3000;
 var f = 0;
 var soundFile;
 
-function preload() {
+
+/*function preload() {
   soundFormats('mp3', 'ogg');
   soundFile = loadSound('jb.mp3');
-}
+}*/
 
 
 function setup() {
@@ -25,7 +26,7 @@ function setup() {
    background(0);
    noStroke();
    noFill();
-   soundFile.play(); 
+   /*soundFile.play();*/
 }
 
 
@@ -39,7 +40,7 @@ function mouseClicked(){
     }else if(f===1){
         f=0;
     }
-
+    
 }
 
 
@@ -53,15 +54,28 @@ function draw() {
         drawSasm();
     }else if(f===1){
         drawTree();
-        
     }
+     alpha=alpha+300;     
+    if(alpha>255){
+     
+    drawword(i);}
 var x=50;
     //drawSa();
     translate(10,20);
     drawSnow();
     drawMouse();
-}
+    drawword();
 
+   
+   
+ }
+
+function drawword(){
+  textSize(100)
+  fill(Math.random()*255,Math.random()*255,Math.random()*255,100);
+ 
+  text("merry christmas",350,1600);
+}
 
 function drawBack(){
 
@@ -210,7 +224,7 @@ function drawBack(){
 
  }
  function drawSasm(){
-
+    
     blendMode(REPLACE);
     var x;
     x= 50;
@@ -561,11 +575,11 @@ function drawBack(){
  }
 
  
- function drawTree(){
+ function drawTree(alpha){
     
     //star//
     x=40;
-    fill(251,176,59);
+    fill(mouseX,Math.random()*255*4,mouseY,100);
     triangle(17*x, 0, 14*x, 5*x, 20*x, 5*x);
     triangle(14*x, 2*x, 20*x, 2*x, 17*x, 7*x);
 
