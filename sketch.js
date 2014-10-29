@@ -14,6 +14,10 @@ var dir4=3000;
 var f = 0;
 var soundFile;
 
+function preload() {
+  soundFormats('mp3', 'ogg');
+  soundFile = loadSound('song.mp3');
+}
 
 
 function setup() {
@@ -21,7 +25,7 @@ function setup() {
    background(0);
    noStroke();
    noFill();
-   
+   soundFile.play(); 
 }
 
 
@@ -206,7 +210,7 @@ function drawBack(){
 
  }
  function drawSasm(){
-    
+
     blendMode(REPLACE);
     var x;
     x= 50;
