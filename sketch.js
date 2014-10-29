@@ -206,6 +206,7 @@ function drawBack(){
 
  }
  function drawSasm(){
+    
     blendMode(REPLACE);
     var x;
     x= 50;
@@ -883,9 +884,10 @@ function drawMouse(){
      fill(204,149,0);
      rect(mouseX+2*x,mouseY+4*x,1*x,1*x);
      //mouse ellipse
+      fill(Math.random()*255,Math.random()*255,Math.random()*255,100);
      ellipse(mouseX,mouseY,100,100);
      //trail ellipse #0
-     fill(Math.random()*255,Math.random()*255,Math.random()*255,100);
+    
      stroke(255, 255, 255, 128);
      strokeWeight(10);
      trailX[0]=(mouseX+trailX[0]*4)/5;
