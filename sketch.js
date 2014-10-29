@@ -14,10 +14,6 @@ var dir4=3000;
 var f = 0;
 var soundFile;
 
-function preload(){
-  mySound=loadSound('assets/song.mp3');
-}
-
 
 
 function setup() {
@@ -25,7 +21,7 @@ function setup() {
    background(0);
    noStroke();
    noFill();
-   mySound.play();
+   
 }
 
 
@@ -39,6 +35,7 @@ function mouseClicked(){
     }else if(f===1){
         f=0;
     }
+
 }
 
 
@@ -901,5 +898,6 @@ function drawMouse(){
          trailY[i]=(trailY[i-1]+trailY[i]*5)/6;
          ellipse(trailX[i],trailY[i],60,60);
      }
+
  }
 
