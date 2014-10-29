@@ -15,10 +15,10 @@ var f = 0;
 var soundFile;
 
 
-/*function preload() {
+function preload() {
   soundFormats('mp3', 'ogg');
   soundFile = loadSound('jb.mp3');
-}*/
+}
 
 
 function setup() {
@@ -26,7 +26,7 @@ function setup() {
    background(0);
    noStroke();
    noFill();
-   /*soundFile.play();*/
+   soundFile.play();
 }
 
 
