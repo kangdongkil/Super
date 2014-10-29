@@ -14,6 +14,10 @@ var dir4=3000;
 var f = 0;
 var soundFile;
 
+function preload(){
+  mySound=loadSound('assets/song.mp3');
+}
+
 
 
 function setup() {
@@ -21,6 +25,7 @@ function setup() {
    background(0);
    noStroke();
    noFill();
+   mySound.play();
 }
 
 
