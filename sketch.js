@@ -16,7 +16,7 @@ var soundFile;
 
 function preload() {
   soundFormats('mp3', 'ogg');
-  soundFile = loadSound('song.mp3');
+  soundFile = loadSound('jb.mp3');
 }
 
 
