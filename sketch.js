@@ -12,6 +12,7 @@ var dir2=1000;
 var dir3=2000;
 var dir4=3000;
 var f = 0;
+var soundFile;
 
 
 
@@ -27,7 +28,7 @@ function setup() {
 
 
 function mouseClicked(){
-    mysound.play();
+    
     if(f===0){
         f=1;
     }else if(f===1){
@@ -46,6 +47,7 @@ function draw() {
         drawSasm();
     }else if(f===1){
         drawTree();
+        
     }
 var x=50;
     //drawSa();
@@ -55,7 +57,7 @@ var x=50;
 }
 
 
-function drawBack(posX, posY, alpha){
+function drawBack(){
 
 
     noStroke();
